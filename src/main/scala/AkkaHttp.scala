@@ -23,11 +23,11 @@ object AkkaHttp {
     """.stripMargin
 
   val request = HttpRequest(
-    method = HttpMethods.POST,
-    uri = "http//markup.su/api/highlighter",
+    method = HttpMethods.GET,
+    uri = "https://api.github.com/users",
     entity = HttpEntity(
       ContentTypes.`application/json`, // application/json
-      s"source=${URLEncoder.encode(source, "UTF-8")}&language=Scala&theme=Sunburst"
+      ""
     )
   )
 
